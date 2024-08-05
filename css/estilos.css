@@ -1,0 +1,404 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+body{
+    font-family: "Exo 2", sans-serif;
+    background: linear-gradient(to bottom, #eea402, #57e2ba, #46417c);
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding: 100px;
+}
+
+h1,h2{
+    font-size: 40px;
+    width: 100%;
+    text-align: center;
+}
+
+h3{
+    text-align: center;
+}
+
+p{
+    color: rgb(59, 58, 58);
+}
+
+header figure img{
+    width: 180px;
+}
+
+#menu {
+    /*background-color: black;*/
+    color: white;
+    padding: 0px;
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contenedor {
+    display: flex; 
+    justify-content: space-between; /*Centro todo verticalmente*/
+    align-items: center; /*Centro todo horizontalmente*/
+}
+
+#menu nav ul {
+    display: flex; /*hago que el ul se convierta en bloque*/
+    list-style: none;
+    gap: 16px;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;/*le quito la decoracion por defecto al a*/
+}
+
+nav a:hover{
+    color: #57e2ba;
+    border-bottom: 2px solid #46417c;
+}
+
+nav .seleccionado {
+    background-color: #46417c;
+    padding: 5px 10px;
+    border-radius: 30px;
+    color: #57e2ba;
+}
+
+/*NOTICIAS*/
+
+main .fondo1 {
+    color: #fecf71;
+    height: 350px;
+    margin-bottom: 10px;
+    background-image: url("../img/Primer-Fondo.jpg");
+    background-repeat: no-repeat; /*La imagen no se repite*/
+    background-size: cover; /*el ancho de la imagen se adapta al de la pantalla*/
+    background-attachment: fixed; /*deja la imagen fija*/
+    /*object-position: 0 0;*/
+    display: flex;/*usando el flex puedo usar el justify-content y el align-items para centrar el h1 y el p*/
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column; /*alinea los hijos verticalmente en una columna*/
+    min-width: 1200px;
+}
+
+main .fondo1 h1{
+    font-size: 50px;
+}
+
+main .fondo1 p{
+    font-size: 20px;
+    color: #fecf71;
+}
+
+main section:nth-of-type(1){
+    width: 1200px;
+
+    margin: 20px auto 0 auto; /*centra*/
+    display: flex;
+    flex-wrap: wrap; /*permite hacer el salto de linea*/
+    justify-content: space-between;
+}
+
+main section:nth-of-type(2){
+    width: 1200px;
+
+    margin: 20px auto 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+main section:nth-of-type(3){
+    width: 1200px;
+
+    margin: 20px auto 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+main section:nth-child(2) article{
+    width: 380px;
+}
+
+main section:nth-child(2) article figure img{
+    width: 100%; /*ajusta el tamano de la imagen*/
+}
+
+figure{
+    position: relative;
+}
+
+span{
+    background-color: #eea402;
+    color: #46417c;
+    display: block;
+    padding: 5px;
+    width: 50px;
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: 1px;
+    position: absolute;
+    right: 8px;
+    top: 181px;
+}
+
+.a-boton{
+    background-color: #eea402;
+    color: #46417c;
+    border: none;
+    margin: 0 auto;
+    font-size: 16px;
+    display: block;
+    padding: 10px 10px;
+    border-radius: 30px;
+    margin-top: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100px;
+    text-align: center;
+    
+}
+
+.a-boton:hover{
+    background-color: #46417c;
+    color: #eea402;
+}
+
+a{
+    text-decoration: none;
+    font-family: "Exo 2", sans-serif;
+}
+
+main section:nth-child(4) article{/*ancho de los dos primeros articles dentre de la grilla*/
+    width: 285px;
+}
+
+main section:nth-child(4) article figure img{
+    width: 100%;
+    border-top-left-radius: 150px;
+    border-bottom-right-radius: 150px;
+}
+
+main section:nth-child(4) table{/*ancho de la tabla*/
+    width: 570px;
+}
+
+.tabla-grilla{
+    width: 100%;
+    text-align: left;
+    border-collapse: separate; /*Hace que no existan espacios entre los border de los td y th*/
+}
+
+.tabla-grilla td{
+    border: 1px solid black;
+    padding: 4px;
+    background-color: #e7c8d9;
+}
+
+.tabla-grilla .td-izquierda, .td-derecha{
+    width: 95px;
+}
+
+.tabla-grilla .td-centro{
+    width: 380px;
+}
+
+main section:nth-child(5) article{
+    width: 285px;
+}
+
+main section:nth-child(5) article figure img{
+    width: 100%;
+    height: 300px;
+    border-radius: 100%;
+    animation: rotar 3s ease-in-out infinite;
+}
+
+main section:nth-child(5) article figure #rotar1{
+    transform:rotate(-22deg);
+    animation: rotar2 3s ease-in-out infinite;
+}
+
+main section:nth-child(5) .article-entrada{
+    width: 570px;
+}
+
+main section:nth-child(5) .article-entrada figure img{
+    width: 100%;
+    height: 450px;
+    border-radius: 0;
+    object-position: center;
+    animation: none;
+}
+
+#entrada nav ul{
+    margin: 10px auto 0 auto;
+    display: table;/*Hace que el ul se comporte como una tabla*/
+}
+
+main section:nth-of-type(4) img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;/*ajustar al tama;o del contenedor a la imagen*/
+}
+
+main section:nth-of-type(4){
+    width: 1200px;
+    margin: 20px auto 0 auto;
+    display: grid;
+    
+    /*Separacion entre imagenes*/
+    gap: 10px 10px;
+
+    grid-template-columns: repeat(4, 1fr); /*columnas*/
+    grid-template-rows: auto 175px 100px 175px 100px; /*filas*/
+
+    grid-template-areas: " t-gri t-gri t-gri t-gri"
+                         " img-1 img-1 img-2 img-3"
+                         " img-4 img-4 img-2 img-3"
+                         " img-4 img-4 img-2 img-5"
+                         " img-4 img-4 img-2 img-5";
+}
+
+main section:nth-child(6) h2{
+    grid-area: t-gri;
+}
+
+main section:nth-child(6) #img-1{
+    grid-area: img-1;
+}
+
+main section:nth-child(6) #img-2{
+    grid-area: img-2;
+}
+
+main section:nth-child(6) #img-3{
+    grid-area: img-3;
+}
+
+main section:nth-child(6) #img-4{
+    grid-area: img-4;
+}
+
+main section:nth-child(6) #img-5{
+    grid-area: img-5;
+}
+
+/*Contacto*/
+
+form{
+    width: 1200px;
+    margin: 32px auto;
+}
+
+input, select{
+    display: block;
+    width: 100%;
+    margin-bottom: 16px;
+    padding: 12px;
+    background-color: #57e2ba;
+    border: none;
+}
+
+#tres-columnas{
+    margin: 0 auto;
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+    width: 900px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+main #boton-enviar{
+    background-color: #57e2ba;
+    color: black;
+    border-radius: 0px;
+    margin: 0 auto;
+    font-size: 16px;
+    display: block;
+    padding: 10px 20px;
+    width: 900px;
+    margin-top: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+
+main #boton-enviar:hover{
+    background-color: #221f3b;
+    color: #57e2ba;
+}
+
+#contacto{
+    background-color: #46417c;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+/*Pie de pagina*/
+
+footer{
+    background-color: black;
+    padding: 10px;
+}
+
+footer p{
+    color: whitesmoke;
+    text-align: center;
+}
+
+footer figure{
+    width: 32px;
+    height: 32px;
+    position: fixed;
+    bottom: 50px;
+    right: 10px;
+}
+
+footer figure a img:hover{
+    content: url('../img/flecha2.png');
+}
+
+@keyframes rotar{
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(-45deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes rotar2{
+    0%{
+        transform: rotate(-22deg);
+    }
+    50%{
+        transform: rotate(-67deg);
+    }
+    100%{
+        transform: rotate(-22deg);
+    }
+}
